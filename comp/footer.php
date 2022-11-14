@@ -5,13 +5,13 @@
 				<div class="footer-widget">
 					<h5 class="mb-4 text-primary">เกี่ยวกับเรา</h5>
 					<ul class="list-unstyled">
-						<li class="mb-2"><a href="#!">เกี่ยวกับ มยส.</a>
+						<li class="mb-2"><a href="abour">เกี่ยวกับ มยส.</a>
 						</li>
-						<li class="mb-2"><a href="#!">กณะกรรมการ</a>
+						<li class="mb-2"><a href="consultant">ที่ปรึกษา</a>
 						</li>
-						<li class="mb-2"><a href="#!">บุคลากร</a>
+						<li class="mb-2"><a href="commitee">กณะกรรมการ</a>
 						</li>
-						<li class="mb-2"><a href="#!">ช่องทางการบริจาค</a>
+						<li class="mb-2"><a href="donation">ช่องทางการบริจาค</a>
 						</li>
 					</ul>
 				</div>
@@ -20,11 +20,11 @@
 				<div class="footer-widget">
 					<h5 class="mb-4 text-primary">บทความ</h5>
 					<ul class="list-unstyled">
-						<li class="mb-2"><a href="service-details">บทความ</a>
+						<li class="mb-2"><a href="category?by=name&key=บทความ">บทความ</a>
 						</li>
-						<li class="mb-2"><a href="service-details">กิจกรรม</a>
+						<li class="mb-2"><a href="category?by=name&key=กิจกรรม">กิจกรรม</a>
 						</li>
-						<li class="mb-2"><a href="service-details">หนังสือ</a>
+						<li class="mb-2"><a href="category?by=name&key=หนังสือ">หนังสือ</a>
 						</li>
 					</ul>
 				</div>
@@ -48,7 +48,7 @@
 							<div class="input-group mb-3">
 								<input type="text" class="form-control shadow-none bg-white border-end-0" placeholder="Email address"> <span class="input-group-text border-0 p-0">
                     <button class="input-group-text border-0 bg-primary" type="submit" name="subscribe"
-                      aria-label="Subscribe for Newsletter"><i class="fas fa-arrow-right"></i></button>
+                      aria-label="Subscribe for Newsletter"><i class="bx bx-envelope"></i></button>
                   </span>
 							</div>
 							<div style="position: absolute; left: -5000px;" aria-hidden="true">
@@ -63,7 +63,7 @@
 		<div class="row align-items-center mt-5 text-center text-md-start">
 			<div class="col-lg-4">
         <a href="index">
-          <img loading="prelaod" decoding="async" class="img-fluid" width="160" src="template/front/images/logo.png" alt="Wallet">
+          <img loading="prelaod" decoding="async" class="img-fluid" width="160" src="../images/logo-dsrr2.png" alt="Wallet">
         </a>
 			</div>
 			<div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
@@ -76,11 +76,11 @@
 			</div>
 			<div class="col-lg-4 col-md-6 text-md-end mt-4 mt-md-0">
 				<ul class="list-unstyled list-inline mb-0 social-icons">
-					<li class="list-inline-item me-3"><a title="Explorer Facebook Profile" class="text-black" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
+					<li class="list-inline-item me-3">
+						<a title="Explorer Facebook Profile" class="text-white btn-primary" href="https://facebook.com/"><i class='bx bxl-facebook-circle'></i></a>
 					</li>
-					<li class="list-inline-item me-3"><a title="Explorer Twitter Profile" class="text-black" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-					</li>
-					<li class="list-inline-item me-3"><a title="Explorer Instagram Profile" class="text-black" href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
+					<li class="list-inline-item me-3">
+						<a title="Explorer Instagram Profile" class="text-white btn-danger" href="https://instagram.com/"><i class='bx bxl-instagram' ></i></a>
 					</li>
 				</ul>
 			</div>
