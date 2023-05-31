@@ -68,37 +68,26 @@ require_once('../comp/header.php');
 </section>
 
 
-
-<section class="about-section section bg-tertiary position-relative overflow-hidden">
+<section class="section">
   <div class="container">
-    <div class="row align-items-center">
+    <div class="row align-items-center justify-content-between">
       <div class="col-lg-5">
-        <div class="section-title">
+      <div class="section-title">
           <p class="text-primary text-uppercase fw-bold mb-3">เกี่ยวกับเรา</p>
           <h1>มูลนิธิเพื่อการเยียวยาและสร้างความสมานฉันท์ชายแดนใต้</h1>
           <p class="lead mb-0 mt-4">
             <p>มูลนิธิเพื่อการเยียวยาและสร้างความสมานฉันท์ชายแดนใต้ ก่อตั้งขึ้นเมื่อวันที่ 19 มกราคม 2553 เป็นองค์กรในรูปแบบมูลนิธิ ที่บริหารจัดการโดยคณะบุคคลที่มีความโปร่งใส และมีประสบการณ์จากการปฏิบัติงานในกระเด็นของการเยียวยาในพื้นที่ และสามารถส่งต่อความต้องการการช่วยเหลือของผู้ได้รับผลกระทบในจังหวัดชายแดนใต้
             </p>
-          </p> <a class="btn btn-primary mt-4" href="about">อ่านต่อ</a>
+          </p> 
         </div>
-      </div>
-      <div class="col-lg-7 text-center text-lg-end">
-        <img loading="lazy" decoding="async" src="../template/front/images/about-us.png" alt="About Ourselves" class="img-fluid">
-      </div>
-    </div>
-  </div>
-</section>
 
-<section class="section">
-  <div class="container">
-    <div class="row align-items-center justify-content-between">
-      <div class="col-lg-5">
         <div class="section-title">
           <p class="text-primary text-uppercase fw-bold mb-3">สู่การเยียวยาที่ยั่งยืน สร้างสมานฉันท์และสันติสุข</p>
           <h1>วัตถุประสงค์</h1>
           <div class="content mb-0 mt-4">
             <p>ภารกิจที่สำคัญยิ่ง คือ การเยียวยาผู้ประสบเหตุความไม่สงบให้ได้รับผลกระทบจากความสูญเสียให้น้อยที่สุด ช่วยให้เขาสามารถดำเนินชีวิตอยู่ต่อไปได้ โดยมีกำลังในการปรับตัวต่อสู้จัดการกับอุปสรรคประการ</p>
           </div>
+          <a class="btn btn-primary mt-4" href="about">อ่านต่อ</a>
         </div>
       </div>
       <div class="col-lg-6">
