@@ -77,11 +77,11 @@
 			<div class="col-lg-4 col-md-6 text-md-end mt-4 mt-md-0">
 				<ul class="list-unstyled list-inline mb-0 social-icons">
 					<li class="list-inline-item me-3">
-						<a title="Explorer Facebook Profile" class="text-white btn-primary" href="https://facebook.com/"><i class='bx bxl-facebook-circle'></i></a>
+						<a title="Explorer Facebook Profile" class="text-white btn-primary" href="https://www.facebook.com/www.dsrrfoundation.org" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
 					</li>
-					<li class="list-inline-item me-3">
+					<!-- <li class="list-inline-item me-3">
 						<a title="Explorer Instagram Profile" class="text-white btn-danger" href="https://instagram.com/"><i class='bx bxl-instagram' ></i></a>
-					</li>
+					</li> -->
 				</ul>
 			</div>
 		</div>
