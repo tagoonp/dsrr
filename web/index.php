@@ -46,56 +46,6 @@ $page_name = basename(__FILE__) ;
 require_once('../comp/header.php');
 ?>
 
-<div class="modal applyLoanModal fade" id="applyLoan" tabindex="-1" aria-labelledby="applyLoanLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header border-bottom-0">
-        <h4 class="modal-title" id="exampleModalLabel">How much do you need?</h4>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form action="#!" method="post">
-          <div class="row">
-            <div class="col-lg-6 mb-4 pb-2">
-              <div class="form-group">
-                <label for="loan_amount" class="form-label">Amount</label>
-                <input type="number" class="form-control shadow-none" id="loan_amount" placeholder="ex: 25000">
-              </div>
-            </div>
-            <div class="col-lg-6 mb-4 pb-2">
-              <div class="form-group">
-                <label for="loan_how_long_for" class="form-label">How long for?</label>
-                <input type="number" class="form-control shadow-none" id="loan_how_long_for" placeholder="ex: 12">
-              </div>
-            </div>
-            <div class="col-lg-12 mb-4 pb-2">
-              <div class="form-group">
-                <label for="loan_repayment" class="form-label">Repayment</label>
-                <input type="number" class="form-control shadow-none" id="loan_repayment" disabled>
-              </div>
-            </div>
-            <div class="col-lg-6 mb-4 pb-2">
-              <div class="form-group">
-                <label for="loan_full_name" class="form-label">Full Name</label>
-                <input type="text" class="form-control shadow-none" id="loan_full_name">
-              </div>
-            </div>
-            <div class="col-lg-6 mb-4 pb-2">
-              <div class="form-group">
-                <label for="loan_email_address" class="form-label">Email address</label>
-                <input type="email" class="form-control shadow-none" id="loan_email_address">
-              </div>
-            </div>
-            <div class="col-lg-12">
-              <button type="submit" class="btn btn-primary w-100">Get Your Loan Now</button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-
 <section class="banner bg-tertiary position-relative overflow-hidden">
   <div class="container">
     <div class="row align-items-center justify-content-center">
@@ -117,79 +67,7 @@ require_once('../comp/header.php');
   </div>
 </section>
 
-<section class="section">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-4 col-md-6">
-        <div class="section-title pt-4">
-          <p class="text-primary text-uppercase fw-bold mb-3">Our Services</p>
-          <h1>Our online and offline services</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipreiscing elit. Lacus penatibus tincidunt</p>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 service-item">
-        <a class="text-black" href="service-details">
-          <div class="block"> <span class="colored-box text-center h3 mb-4">01</span>
-            <h3 class="mb-3 service-title">Personal loans</h3>
-            <p class="mb-0 service-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-              eirmod</p>
-          </div>
-        </a>
-      </div>
-      <div class="col-lg-4 col-md-6 service-item">
-        <a class="text-black" href="service-details">
-          <div class="block"> <span class="colored-box text-center h3 mb-4">02</span>
-            <h3 class="mb-3 service-title">Home Equity Loans</h3>
-            <p class="mb-0 service-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-              eirmod</p>
-          </div>
-        </a>
-      </div>
-      <div class="col-lg-4 col-md-6 service-item">
-        <a class="text-black" href="service-details">
-          <div class="block"> <span class="colored-box text-center h3 mb-4">
 
-
-              03
-
-            </span>
-            <h3 class="mb-3 service-title">Student Loans</h3>
-            <p class="mb-0 service-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-              eirmod</p>
-          </div>
-        </a>
-      </div>
-      <div class="col-lg-4 col-md-6 service-item">
-        <a class="text-black" href="service-details">
-          <div class="block"> <span class="colored-box text-center h3 mb-4">
-
-
-              04
-
-            </span>
-            <h3 class="mb-3 service-title">Mortgage Loans</h3>
-            <p class="mb-0 service-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-              eirmod</p>
-          </div>
-        </a>
-      </div>
-      <div class="col-lg-4 col-md-6 service-item">
-        <a class="text-black" href="service-details">
-          <div class="block"> <span class="colored-box text-center h3 mb-4">
-
-
-              05
-
-            </span>
-            <h3 class="mb-3 service-title">Payday Loans</h3>
-            <p class="mb-0 service-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-              eirmod</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
 
 <section class="about-section section bg-tertiary position-relative overflow-hidden">
   <div class="container">
