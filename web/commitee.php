@@ -65,7 +65,7 @@ require_once('../comp/header.php');
 	<div class="container">
 		<div class="row position-relative">
 			<?php 
-			$strSQL = "SELECT * FROM dsx3_personnel WHERE dp_status = 'Y' AND dp_personnel_type = '2' ORDER BY dp_seq";
+			$strSQL = "SELECT * FROM dsx3_personnel WHERE dp_status = 'Y' AND dp_personnel_type = '2' AND dp_delete = 'N' ORDER BY dp_seq";
 			$res = $db->fetch($strSQL, true, true);
 			if(($res) && ($res['status'])){
 				foreach ($res['data'] as $row) {

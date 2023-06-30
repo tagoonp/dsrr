@@ -6,6 +6,34 @@ require('../config/php/mailer.php');
 
 $page_name = basename(__FILE__) ;
 
+$id = null;
+
+if((!isset($_REQUEST['id'])) || ($_REQUEST['id'] == '')){
+    $db->close($conn);
+    header('Location: ./404');
+    die();
+}
+
+$id = mysqli_real_escape_string($conn, $_REQUEST['id']);
+
+$strSQL = "SELECT * FROM dsx3_content WHERE con_id = '$id' AND con_delete = 'N' AND con_status = 'public'";
+$resContent = $db->fetch($strSQL, false, false);
+if($resContent){
+    $new_view = $resContent['con_read'] + 1;
+    $strSQL = "UPDATE dsx3_content SET con_read = '$new_view' WHERE con_id = '$id'";
+    $res = $db->execute($strSQL);
+
+    if($resContent['con_redirect'] == 'Y'){
+        header('Location: ' . $resContent['con_redirect_url']);
+        die();
+    }
+}else{
+    $db->close($conn);
+    header('Location: ./404');
+    die();
+} 
+
+
 ?>
 <!DOCTYPE html>
 
@@ -13,7 +41,7 @@ $page_name = basename(__FILE__) ;
 
 <head>
 	<meta charset="utf-8">
-	<title>ติดต่อเรา</title>
+	<title><?php echo $resContent['con_title']; ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	<meta name="title" content="มูลนิธิเพื่อการเยียวยาและสร้างความสมานฉันท์ชายแดนใต้ มยส." />
 	<meta name="description" content="องค์กรในรูปแบบมูลนิธิ ที่บริหารจัดการโดยคณะบุคคลที่มีความโปร่งใส และมีประสบการณ์จากการปฏิบัติงานในกระเด็นของการเยียวยาในพื้นที่ และสามารถส่งต่อความต้องการการช่วยเหลือของผู้ได้รับผลกระทบในจังหวัดชายแดนใต้" />
@@ -49,11 +77,11 @@ require_once('../comp/header.php');
 	<div class="container">
 		<div class="row">
 			<div class="col-8 mx-auto text-center">
-				<h2 class="mb-3 text-capitalize fw-500">ติดต่อเรา</h2>
+				<h2 class="mb-3 text-capitalize fw-500"><?php echo $resContent['con_title']; ?></h2>
 				<ul class="list-inline breadcrumbs text-capitalize" style="font-weight:500">
 					<li class="list-inline-item"><a href="index">หน้าแรก</a>
 					</li>
-					<li class="list-inline-item">/ &nbsp; <a href="about">ติดต่อทุนมูลนิธิฯ</a>
+					<li class="list-inline-item">/ &nbsp; <a href="<?php echo $resContent['con_url']; ?>"><?php echo $resContent['con_title']; ?></a>
 					</li>
 				</ul>
 			</div>

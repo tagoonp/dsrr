@@ -9,41 +9,36 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mx-auto mb-2 mb-lg-0 nav-right">
-					<li class="nav-item"> <a class="nav-link" href="index">หน้าแรก</a></li>
-					<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">เกี่ยวกับเรา</a>
-						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<li><a class="dropdown-item " href="about">เกี่ยวกับ มยส.</a>
-							</li>
-							<li><a class="dropdown-item " href="consultant">ที่ปรึกษา</a>
-							</li>
-							<li><a class="dropdown-item " href="commitee">กรรมการ</a>
-							</li>
-						</ul>
-					</li>
-					<!-- <li class="nav-item"> <a class="nav-link" href="about">เกี่ยวกับเรา</a></li> -->
-                    <li class="nav-item "> <a class="nav-link" href="donation">ช่องทางการบริจาค</a></li>
-					<li class="nav-item "> <a class="nav-link" href="category?by=name&key=กิจกรรม">กิจกรรม</a></li>
-					<li class="nav-item "> <a class="nav-link" href="category?by=name&key=บทความ">บทความ</a></li>
-					<li class="nav-item "> <a class="nav-link" href="category?by=name&key=หนังสือ">หนังสือ</a></li>
-					<li class="nav-item "> <a class="nav-link" href="contact">ติดต่อเรา</a></li>
-					<!-- <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
-						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<li><a class="dropdown-item " href="blog">Blog</a>
-							</li>
-							<li><a class="dropdown-item " href="blog-details">Blog Details</a>
-							</li>
-							<li><a class="dropdown-item " href="service-details">Service Details</a>
-							</li>
-							<li><a class="dropdown-item " href="faq">FAQ&#39;s</a>
-							</li>
-							<li><a class="dropdown-item " href="legal">Legal</a>
-							</li>
-							<li><a class="dropdown-item " href="terms">Terms &amp; Condition</a>
-							</li>
-							<li><a class="dropdown-item " href="privacy-policy">Privacy &amp; Policy</a>
-							</li>
-						</ul>
-					</li> -->
+					<?php 
+					$strSQL = "SELECT * FROM dsx3_menu WHERE menu_position_id = '1' AND menu_level = '1'";
+					$res = $db->fetch($strSQL, true, true);
+					if(($res) && ($res['status'])){
+						foreach ($res['data'] as $row) {
+							$menu_parent_id = $row['menu_id'];
+
+							$strSQL = "SELECT * FROM dsx3_menu WHERE  menu_position_id = '1' AND menu_level = '2' AND menu_parent_id = '$menu_parent_id'";
+							$res2 = $db->fetch($strSQL, true, true);
+							
+							if(($res2) && ($res2['status'])){
+								?>
+								<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><?php echo $row['menu_title'];?></a>
+									<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+										<?php 
+										foreach ($res2['data'] as $row2) {
+											?><li><a class="dropdown-item" href="<?php echo $row2['menu_url']; ?>" target="<?php echo $row2['menu_link_target'];?>"><?php echo $row2['menu_title']; ?></a></li><?php
+										}
+										?>
+									</ul>
+								</li>
+								<?php
+							}else{
+								?>
+								<li class="nav-item "><a class="nav-link" href="<?php echo $row['menu_url'];?>" target="<?php echo $row['menu_link_target'];?>"><?php echo $row['menu_title'];?></a></li>
+								<?php
+							}
+						}
+					}
+					?>
 				</ul>
 			</div>
 		</div>

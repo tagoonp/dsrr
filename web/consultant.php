@@ -65,7 +65,7 @@ require_once('../comp/header.php');
 	<div class="container">
 		<div class="row position-relative">
 			<?php 
-			$strSQL = "SELECT * FROM dsx3_personnel WHERE dp_status = 'Y' AND dp_personnel_type = '1' ORDER BY dp_seq";
+			$strSQL = "SELECT * FROM dsx3_personnel WHERE dp_status = 'Y' AND dp_personnel_type = '1' AND dp_delete = 'N' ORDER BY dp_seq";
 			$res = $db->fetch($strSQL, true, true);
 			if(($res) && ($res['status'])){
 				foreach ($res['data'] as $row) {
@@ -74,14 +74,6 @@ require_once('../comp/header.php');
 						<div class="card bg-transparent border-0 text-center">
 							<div class="card-img">
 								<img loading="lazy" decoding="async" src="<?php if($row['dp_profile'] != null) { echo $row['dp_profile']; } else { echo "../template/front/images/about/team-1.jpg"; } ?>" alt="Scarlet Pena" class="rounded w-100" width="300" height="332">
-								<!-- <ul class="card-social list-inline">
-									<li class="list-inline-item"><a class="facebook" href="#"><i class="fab fa-facebook"></i></a>
-									</li>
-									<li class="list-inline-item"><a class="twitter" href="#"><i class="fab fa-twitter"></i></a>
-									</li>
-									<li class="list-inline-item"><a class="instagram" href="#"><i class="fab fa-instagram"></i></a>
-									</li>
-								</ul> -->
 							</div>
 							<div class="card-body">
 								<h3><?php echo $row['dp_fullname']; ?></h3>

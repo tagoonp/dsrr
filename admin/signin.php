@@ -146,7 +146,7 @@ $page_name = basename(__FILE__) ;
               <!-- /Logo -->
               <p class="mb-4">กรุณาเข้าสู่ระบบด้วยบัญชีผู้ใช้งานของท่าน</p>
 
-              <form id="formAuthentication" class="mb-3" onsubmit="authen.provider_login(); return false;">
+              <form id="formAuthentication" class="mb-3" onsubmit="authen.signin(); return false;">
                 <div class="mb-3">
                   <label for="email" class="form-label">E-mail address หรือ ชื่อบัญชีผู้ใช้งาน</label>
                   <input type="text" class="form-control" id="txtUsername" name="txtUsername" placeholder="Enter your email or username" autofocus required />
@@ -210,7 +210,7 @@ $page_name = basename(__FILE__) ;
     <script src="../template/back/assets/js/main.js"></script>
 
     <!-- Page JS -->
-    <script src="../template/back/config/js/config.conf.js?v=<?php echo filemtime('../../config/js/config.conf.js'); ?>"></script>
+    <script src="../config/js/main.conf.js?v=<?php echo filemtime('../config/js/main.conf.js'); ?>"></script>
     <script src="../assets/js/authen.js?v=<?php echo filemtime('../assets/js/authen.js'); ?>"></script>
 
     <script>

@@ -67,7 +67,7 @@
         </a>
 			</div>
 			<div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
-				<ul class="list-unstyled list-inline mb-0 text-lg-center">
+				<ul class="list-unstyled list-inline mb-0 text-lg-center" id="btMenu_2">
 					<li class="list-inline-item me-4"><a class="text-black" href="privacy-policy">นโยบายความเป็นส่วนตัว</a>
 					</li>
 					<li class="list-inline-item me-4"><a class="text-black" href="terms">Site map</a>
